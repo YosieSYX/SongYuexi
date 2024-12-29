@@ -1,0 +1,71 @@
+body{
+    background: url('background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 10vh;
+}
+
+.image-container1 {
+    width: 45px; /* Adjust the width as needed */
+    height: 6vh;
+}
+
+.rounded-image {
+    width: 240px; /* Adjust the width as needed */
+    height: 265px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire element */
+    border: 2px solid #000; /* Optional: Adds a border around the image */
+}
+
+.custom-position {
+    top: 100px; /* Adjust the distance from the top as needed */
+    left: 100px; /* Adjust the distance from the left as needed */
+}
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 25vh; /* Full viewport height */
+    font-size: 18px
+}
+
+.text-center {
+    text-align: center; /* Center text */
+}
+
+.text-bottom{
+    position:relative;
+    top:210px;
+    left:500px;
+    color: white
+}
+
+.col-4 {
+    max-width: 400px; /* Adjust width as needed */
+    width: 100%;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: none;
+    overflow: hidden;
+  }
+
+  /* Style the links inside the navigation bar */
+.topnav a{
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
