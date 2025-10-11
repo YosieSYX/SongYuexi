@@ -6,24 +6,36 @@
 		<meta name="description" content="Official website of Song Yuexi, showcasing hobbies, projects, and more.">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+
+		<!-- Top navigation -->
+		<header id="header">
+			<nav class="top-nav" style="overflow-x:auto; -webkit-overflow-scrolling: touch;">
+				<ul style="display:flex; flex-wrap:nowrap; gap:0.6rem; align-items:center; white-space:nowrap; padding:0 0.25rem; margin:0; list-style:none;">
+					<li style="display:inline-block; white-space:nowrap;"><a href="#home" class="active">Home</a></li>
+					<li style="display:inline-block; white-space:nowrap;"><a href="#first">Experiences</a></li>
+					<li style="display:inline-block; white-space:nowrap;"><a href="#publications">Publications</a></li>
+					<li style="display:inline-block; white-space:nowrap;"><a href="#blogs">Blogs</a></li>
+					<li style="display:inline-block; white-space:nowrap;"><a href="#hobbies">Hobbies</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<section id="home" class="banner style1 orient-left content-align-left onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Song Yuexi</h1>
-							<p class="major">Hi, I'm Song Yuexi, a sophomore from National University of Singapore majoring in Computer Science. </a>My research interest lies in theoretical computing and cryptography!</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Know more about me</a></li>
-							</ul>
+							<p class="major">Hi, I'm Song Yuexi, a junior from National University of Singapore majoring in Computer Science and second major in Mathematics. My primary research interests are in computer vision and robotics, and I also explore sports analytics as a personal hobby.</p>
+							<p class="major">My primary research interests are in computer vision and robotics, and I also explore sports analytics as a personal hobby.</p>
 						</div>
 						<div class="image">
-							<img src="images/Me.jpeg" alt="" />
+							<img src="images/Me.jpeg" alt="" class="profile-avatar" />
 						</div>
 					</section>
 					
@@ -32,20 +44,45 @@
                     <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
                         <div class="content">
                             <h2>Experiences</h2>
-                            <h3>Risk Advisory Intern @Deloitte</h3> <!-- Added subtitle -->
+							<h3>Computer Vision Research Intern @Singapore-MIT Alliance for Research and Technology</h3> <!-- Added subtitle -->
+							<h3>2025.05 - 2025.08</h3>
+							<p>Developed a large-scale semantic segmentation dataset spanning images from 500+ cities worldwide supervised by Dr. Sun Kailai, MIT Professor Zhao Jinhua and UF Professor Wang Shenhao.</p>
+							<p>Proposed a Mamba-inspired segmentation architecture with a novel angle-based loss function, improving segmentation accuracy by 2% on a 2000-image test set.</p>
+							<h3>Robotics Engineer @ Bumblebee Autonomous Systems</h3> <!-- Added subtitle -->
+							<h3>2023.09 - Now</h3>
+							<p>Implemented a YOLO-based computer vision pipeline for real-time object detection and perception. Developed mission planning algorithms and strategies for RoboSub competition tasks. </p>
+							<p>Gained hands-on experience across perception, control, and navigation using ROS2 in an autonomous underwater vehicle.</p>
+							<h3>Robotics Research Assistant @ NUS</h3> <!-- Added subtitle -->
+							<h3>2025.05 - Now</h3>
+							<p>Researched robotic safety and built a large-scale benchmark dataset for safe mission planning in collaboration with ETH Robotics System Lab. Designed an agentic data generation pipeline using a unified planning framework to simulate diverse planning scenarios and safety hazards.</p>
+							<h3>Risk Advisory Intern @Deloitte</h3> <!-- Added subtitle -->
 							<h3>2024.12 - 2025.1</h3>
                             <p>Wrote test cases and conducted developer testing for secure large file transfer system using IBM. Ensured correctness of file encryption and decryption throughout the transfer process</p>
                             <h3>Teaching Assistant @NUS</h3> <!-- Added subtitle -->
                             <p>2024.8 - 2024.12 CS1231S Discrete Structures</p>
 							<p>2025.1 - 2025.5 CS2040S Data Structures and Algorithms</p>
+							<p>2025.8 - 2025.12 CS3230 Design and Analysis of Algorithms</p>
 							<h3>Research Intern @Quancheng Laboratory</h3> <!-- Added subtitle -->
 							<h3>2024.5 - 2024.8</h3>
                             <p>Researched on commutative encryption algorithms and PSI-CA problem.</p>
                         </div>
                     </section>
 
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="publications">
+						<div class="content">
+							<h2>Publications</h2>
+							<p><strong><a href="https://link.springer.com/chapter/10.1007/978-3-032-06167-6_19" target="_blank">TANS: A Chess-Inspired Notation System for Strategy Analysis of Tennis Games</a></strong></p>
+							<p><strong>Yuexi Song</strong>, Chuanfei Li, Hao Cao, Ling Wu, Huanhuan Zheng, and Zhenkai Liang</p>
+							<p>Distinguished Paper Award (Top 5%) | International Sports Analytics Conference and Exhibition 2025</p>
+							<p>
+								Developed TANS to formalize tennis strategy analysis, enabling systematic data-driven research and AI-based tactical modeling. 
+								Utilised charted data and employed grey relational analysis to identify winning strategies in tennis doubles games.
+							</p>
+						</div>
+                    </section>
+
 				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<section id="blogs" class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Blogs</h2>
 							<p>I like to dump out my thoughts on various topics</p>
@@ -58,7 +95,7 @@
 						</div>
 					</section>
 					<!-- Three -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<section id="hobbies" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Hobbies</h2>
 							<img src="images/tennis.png" alt="Tennis" class="subtitle-image" />
@@ -75,7 +112,7 @@
 					</section>
 					
 				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
+					<footer id="contact" class="wrapper style1 align-center">
 						<div class="inner">
 							<ul class="icons">
 								<li><a href="https://www.linkedin.com/in/yuexi-song-9059702a8/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>

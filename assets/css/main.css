@@ -2646,7 +2646,7 @@ input, select, textarea {
 
 		.image.left, .image.right {
 			width: 20%;
-			max-width: 5rem;
+			max-width: 4rem;
 		}
 
 			.image.left img, .image.right img {
@@ -2672,17 +2672,17 @@ input, select, textarea {
 		}
 
 			.image.fit img {
-				width: 80%;
+				width: 50%;
 			}
 
 		.image.main {
 			display: block;
 			margin: 0 0 3rem 0;
-			width: 80%;
+			width: 50%;
 		}
 
 			.image.main img {
-				width: 80%;
+				width: 50%;
 			}
 
 /* List */
@@ -3477,7 +3477,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 1;
 			-ms-flex-shrink: 1;
 			flex-shrink: 1;
-			width: 50%;
+			width: 70%;
 			max-width: 48rem;
 			margin: 0 auto;
 		}
@@ -3492,7 +3492,7 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			border-radius: 0;
-			width: 50%;
+			width: 30%;
 		}
 
 			.banner.style1 .image img {
@@ -3503,11 +3503,12 @@ input, select, textarea {
 				-moz-object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
-				object-position: center;
+				object-position: right;
 				display: block;
 				position: absolute;
 				top: 0;
 				left: 0;
+				right: 0;
 				width: 100%;
 				height: 100%;
 				border-radius: 0;

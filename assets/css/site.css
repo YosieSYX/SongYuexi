@@ -1,0 +1,117 @@
+/* ============================
+   Full-image responsive overrides
+   ============================ */
+
+/* Layout */
+body {
+  background: #ffffff;
+  color: #222;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Header / nav */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.top-nav {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+}
+
+.top-nav ul {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.top-nav ul li { list-style: none; }
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.top-nav a:hover { background: rgba(71,211,229,0.08); color: #0a76a0; }
+.top-nav a.active { background: #eaf8fb; color: #007a9a; }
+
+/* Wrapper / content */
+#wrapper { padding-top: 1.2rem; }
+.wrapper .inner { max-width: 920px; margin: 0 auto; padding: 2.2rem 1.2rem; }
+
+/* Banner / hero image containers */
+.banner .image,
+.hero .image {
+  width: 100%;
+  max-width: 400px;          /* maximum container width */
+  height: auto;               /* let height adjust automatically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;             /* center container horizontally */
+}
+
+/* Profile avatar */
+.profile-avatar {
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;        /* show full image */
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+/* All images (banner, hero, profile) */
+.banner .image img,
+.hero .image img,
+.profile-avatar,
+img[src$="/Me.jpeg"] {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  border-radius: 8px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 880px) {
+  .banner .image,
+  .hero .image {
+    max-width: 200px;
+  }
+
+  .banner .image img,
+  .hero .image img,
+  .profile-avatar {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-nav ul { justify-content: center; }
+  .wrapper .inner { padding: 1.2rem; }
+  .banner .content { padding-top: 1rem; }
+}
+
+/* End full-image overrides */
