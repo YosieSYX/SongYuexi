@@ -1,117 +1,106 @@
-/* ============================
-   Full-image responsive overrides
-   ============================ */
+:root {
+  color-scheme: light;
+  --ink: #252a30;
+  --muted: #626970;
+  --accent: #245c83;
+  --line: #e3e6e8;
+}
 
-/* Layout */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  background: #ffffff;
-  color: #222;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-/* Header / nav */
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.95);
-  border-bottom: 1px solid #e6e6e6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-}
-
-.top-nav {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0.6rem 1rem;
-}
-
-.top-nav ul {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.top-nav ul li { list-style: none; }
-
-.top-nav a {
-  color: #333;
-  text-decoration: none;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
-.top-nav a:hover { background: rgba(71,211,229,0.08); color: #0a76a0; }
-.top-nav a.active { background: #eaf8fb; color: #007a9a; }
-
-/* Wrapper / content */
-#wrapper { padding-top: 1.2rem; }
-.wrapper .inner { max-width: 920px; margin: 0 auto; padding: 2.2rem 1.2rem; }
-
-/* Banner / hero image containers */
-.banner .image,
-.hero .image {
-  width: 100%;
-  max-width: 400px;          /* maximum container width */
-  height: auto;               /* let height adjust automatically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;             /* center container horizontally */
-}
-
-/* Profile avatar */
-.profile-avatar {
-  width: auto;
-  max-width: 200px;
-  height: auto;
-  object-fit: contain;        /* show full image */
-  object-position: center;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin: 0;
   background: #fff;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+strong { font-weight: 600; }
+header, main, footer { width: min(100% - 64px, 980px); margin-inline: auto; }
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 72px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+nav { display: flex; flex-wrap: wrap; gap: 22px; }
+nav a { color: var(--muted); }
+.cv-link { margin-left: auto; white-space: nowrap; }
+.skip-link { position: absolute; top: -60px; left: 16px; padding: 8px 16px; background: #fff; }
+.skip-link:focus { top: 8px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 52px; align-items: start; padding: 48px 0 38px; }
+h1, h2, h3 { color: var(--ink); font-weight: 600; }
+h1 { margin: 0; font-size: 32px; line-height: 1.2; letter-spacing: -.025em; }
+h2 { margin: 0 0 20px; font-size: 21px; line-height: 1.35; letter-spacing: -.015em; }
+h3 { margin: 0; font-size: 15px; line-height: 1.55; }
+p { margin: 9px 0 0; }
+.hero p { margin-top: 14px; }
+.hero .affiliation { margin-top: 7px; color: var(--muted); font-size: 14px; }
+.profile { margin-top: 3px; }
+.profile img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 25%; border-radius: 2px; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 19px; font-size: 13px; }
+.profile-links a { overflow-wrap: anywhere; }
+.rule { padding: 30px 0; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.pubs { display: grid; gap: 22px; }
+.pubs p { margin-top: 4px; font-size: 14px; }
+.pubs .venue { color: var(--muted); font-size: 13px; }
+.status, .distinction { display: block; }
+.distinction { color: var(--accent); }
+.entries { display: grid; gap: 22px; }
+.entries article { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 25px; }
+.entries p { font-size: 14px; margin-top: 5px; }
+.entries .date { margin-top: 2px; font-size: 12px; color: var(--muted); }
+.entries .advisor { color: var(--muted); font-size: 13px; margin-top: 3px; }
+.awards { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; font-size: 14px; }
+.awards li { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; }
+.awards span { color: var(--muted); font-size: 13px; }
+.courses { padding-left: 18px; margin: 12px 0 0; font-size: 14px; }
+.courses li + li { margin-top: 8px; }
+.courses span { display: block; color: var(--muted); font-size: 12px; }
+.section-intro { margin: -12px 0 20px; color: var(--muted); font-size: 14px; }
+.writing-list { display: grid; gap: 20px; }
+.writing-list article { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 25px; }
+.writing-list p { margin-top: 5px; font-size: 14px; }
+.writing-list .topic { margin-top: 2px; color: var(--muted); font-size: 12px; }
+.hobby-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.hobby-list article { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 20px; align-items: start; }
+.hobby-list p { margin-top: 5px; font-size: 14px; }
+.hobby-list figure { margin: 0; }
+.hobbies img { display: block; width: 100%; height: 210px; object-fit: cover; object-position: center 64%; border-radius: 2px; }
+.hobby-list article:last-child img { object-position: center 48%; }
+footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 22px 0 32px; color: var(--muted); font-size: 12px; }
+
+@media (max-width: 760px) {
+  header, main, footer { width: calc(100% - 40px); }
+  header { flex-wrap: wrap; gap: 12px 20px; padding-block: 16px; }
+  nav { order: 3; width: 100%; gap: 10px 20px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 145px; gap: 28px; padding-top: 32px; }
+  .entries article, .writing-list article { grid-template-columns: 130px minmax(0, 1fr); gap: 18px; }
+  .awards li { grid-template-columns: 1fr; gap: 0; }
+  .hobby-list { gap: 22px; }
+  .hobby-list article { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; }
+  .hobbies img { height: 155px; }
 }
 
-/* All images (banner, hero, profile) */
-.banner .image img,
-.hero .image img,
-.profile-avatar,
-img[src$="/Me.jpeg"] {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain !important;
-  object-position: center !important;
-  display: block !important;
-  border-radius: 8px !important;
+@media (max-width: 540px) {
+  .hero { grid-template-columns: 1fr; gap: 24px; }
+  .profile { grid-row: 1; width: 125px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-bottom: 16px; }
+  .entries article, .writing-list article { grid-template-columns: 1fr; gap: 3px; }
+  .hobby-list { grid-template-columns: 1fr; }
+  .hobby-list article { grid-template-columns: 115px minmax(0, 1fr); }
+  .rule { padding-block: 26px; }
+  footer { flex-wrap: wrap; }
 }
 
-/* Responsive adjustments */
-@media (max-width: 880px) {
-  .banner .image,
-  .hero .image {
-    max-width: 200px;
-  }
-
-  .banner .image img,
-  .hero .image img,
-  .profile-avatar {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto !important;
-    height: auto !important;
-  }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
-
-@media (max-width: 720px) {
-  .top-nav ul { justify-content: center; }
-  .wrapper .inner { padding: 1.2rem; }
-  .banner .content { padding-top: 1rem; }
-}
-
-/* End full-image overrides */
